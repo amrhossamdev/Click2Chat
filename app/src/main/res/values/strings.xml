@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Click2Chat</string>
+    <string name="sorry">Please Enter Number !</string>
+    <string name="info">Simple App To Make Faster Conversation @ Whatsapp By Amr Hossam</string>
+    <string name="about">About ?</string>
+    <string name="click">Click To Chat</string>
+    <string name="number">Enter Number</string>
+</resources>

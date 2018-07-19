@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">أنقر للمحادثةر</string>
+    <string name="sorry">من فضلك أدخل رقم</string>
+    <string name="info">تطبيق بسيط لإرسال رسالة لأي رقم علي واتساب بضغطه زر، بواسطة عمرو حسام</string>
+    <string name="about">حول ؟</string>
+    <string name="click">إضغط للمحادثة</string>
+    <string name="number">اكتب رقم</string>
+
+</resources>
