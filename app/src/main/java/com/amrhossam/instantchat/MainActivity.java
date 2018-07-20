@@ -18,17 +18,12 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 
 import com.amrhossam.instantchatm.R;
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.InterstitialAd;
 import com.hbb20.CountryCodePicker;
 
 
 public class MainActivity extends AppCompatActivity {
     CountryCodePicker ccp;
-    private AdView mAdView;
-    private InterstitialAd mInterstitialAd;
+
 
     //Donate Me https://www.paypal.me/amrhossamdev
 
@@ -39,39 +34,11 @@ public class MainActivity extends AppCompatActivity {
         CardView button = findViewById(R.id.button);
         final EditText editText = findViewById(R.id.edit);
         final LinearLayout liner = findViewById(R.id.linear);
-        ccp = (CountryCodePicker) findViewById(R.id.ccp);
-        mAdView = findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
+        ccp = findViewById(R.id.ccp);
+
         //Donate Me https://www.paypal.me/amrhossamdev
 
 
-        mAdView.setAdListener(new AdListener() {
-
-            @Override
-            public void onAdLoaded() {
-                mAdView.setVisibility(View.VISIBLE);
-
-            }
-
-            @Override
-            public void onAdFailedToLoad(int error) {
-                mAdView.setVisibility(View.GONE);
-            }
-
-
-        });
-        final InterstitialAd mInterstitialAd = new InterstitialAd(MainActivity.this);
-        // Put your AdUnitId here
-        mInterstitialAd.setAdUnitId("");
-        AdRequest adRequestInter = new AdRequest.Builder().build();
-        mInterstitialAd.setAdListener(new AdListener() {
-            @Override
-            public void onAdLoaded() {
-                mInterstitialAd.show();
-            }
-        });
-        mInterstitialAd.loadAd(adRequestInter);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,18 +56,6 @@ public class MainActivity extends AppCompatActivity {
 
                     boolean isWhatsappInstalled = whatsappInstalledOrNot("com.whatsapp");
                     if (isWhatsappInstalled) {
-                        final InterstitialAd mInterstitialAd = new InterstitialAd(MainActivity.this);
-                        // Put your AdUnitId here
-                        mInterstitialAd.setAdUnitId("");
-                        AdRequest adRequestInter = new AdRequest.Builder().build();
-                        mInterstitialAd.setAdListener(new AdListener() {
-                            @Override
-                            public void onAdLoaded() {
-                                mInterstitialAd.show();
-                            }
-                        });
-                        mInterstitialAd.loadAd(adRequestInter);
-
                         Intent sendIntent = new Intent("android.intent.action.MAIN");
                         sendIntent.setComponent(new ComponentName("com.whatsapp", "com.whatsapp.Conversation"));
                         sendIntent.putExtra("jid", Code + PhoneNumberUtils.stripSeparators(smsNumber) + "@s.whatsapp.net");
