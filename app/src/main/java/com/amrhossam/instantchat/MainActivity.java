@@ -62,8 +62,7 @@ public class MainActivity extends AppCompatActivity {
 
         });
         final InterstitialAd mInterstitialAd = new InterstitialAd(MainActivity.this);
-        // Put your AdUnitId here
-        mInterstitialAd.setAdUnitId("");
+        mInterstitialAd.setAdUnitId("ca-app-pub-2200927207149205/6094778422");
         AdRequest adRequestInter = new AdRequest.Builder().build();
         mInterstitialAd.setAdListener(new AdListener() {
             @Override
@@ -90,8 +89,7 @@ public class MainActivity extends AppCompatActivity {
                     boolean isWhatsappInstalled = whatsappInstalledOrNot("com.whatsapp");
                     if (isWhatsappInstalled) {
                         final InterstitialAd mInterstitialAd = new InterstitialAd(MainActivity.this);
-                        // Put your AdUnitId here
-                        mInterstitialAd.setAdUnitId("");
+                        mInterstitialAd.setAdUnitId("ca-app-pub-2200927202149705/6094778482");
                         AdRequest adRequestInter = new AdRequest.Builder().build();
                         mInterstitialAd.setAdListener(new AdListener() {
                             @Override
